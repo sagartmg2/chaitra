@@ -18,7 +18,11 @@
 
 /* to pull code /fetch code 
 
-    - git clone <git_url>
+    - git clone <git_url> // for the very first time only
+
+    from next time 
+
+    - git pull
 
 
 */
