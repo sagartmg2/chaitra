@@ -13,6 +13,14 @@
     3. git commit -m "feature_name"
     4. git push
 
+*/
+
+
+/* to pull code /fetch code 
+
+    - git clone <git_url>
 
 
 */
+
+
