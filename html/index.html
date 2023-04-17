@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- 
+        html syntanx
+        <element_name>   content </element_name>
+
+
+        selector
+            - id 
+            - class
+            - element/ tag selector 
+            - combined selector 
+                - descendent selector
+                - and selector
+            
+
+        css syntanx
+        selector {
+            property_name : value;
+        }
+     -->
+
+
+    <!--  internal css -->
+    <style>
+        /* reset css */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+
+
+        #small {
+            font-size: 9px;
+            /* color: red;
+            font-family: sans-serif;
+            text-transform: lowercase; */
+
+        }
+
+        /* #second {
+            color: red;
+            font-family: sans-serif;
+            text-transform: lowercase;
+        }
+
+        #third {
+            color: red;
+            font-family: sans-serif;
+            text-transform: lowercase;
+        } */
+
+        .sans-serif--red {
+            font-family: sans-serif;
+            color: red;
+        }
+
+        .box {
+            height: 300px;
+            padding: 25px;
+            width: 375px;
+            border: 1px solid black
+        }
+
+        .border {
+            border: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid;
+            padding: 10px;
+        }
+    </style>
+
+
+
+</head>
+
+<body id="" class="">
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" class="active-link">home</a>
+                </li>
+                <li>
+                    <a href="./about.html">about us </a>
+                </li>
+                <li>
+                    <a href="./courses/mern.html">MERN</a>
+                </li>
+                <li>
+                    <a href="./courses/upcomming/data-science.html">data-science</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Quanity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Apple</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Orange</td>
+                <td>10</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>Box Model</h2>
+
+    <div class="box">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam modi illo vitae? Voluptate eligendi expedita
+        voluptatem, molestiae cupiditate architecto perspiciatis dolor voluptatum similique quae ipsam laboriosam
+        blanditiis magnam harum laborum!
+    </div>
+
+    <div class="border">
+        <p>
+            Lorem ipsum dolor sit
+        </p>
+        <p>
+            Lorem ipsum dolor sit
+        </p>
+    </div>
+    <div class="border">
+        <p>
+            Lorem ipsum dolor sit
+        </p>
+        <p>
+            Lorem ipsum dolor sit
+        </p>
+    </div>
+
+    <hr>
+
+
+    <!--  in a page there shouldn't be more than one <h1>  -->
+    <h1>Web</h1>
+    <h2>Elements</h2>
+    <h3>Block Level Elments</h3>
+    <ul>
+        <li>h1</li>
+        <li>h2, ... h6</li>
+        <li>p</li>
+    </ul>
+    <h3>Inline Elments</h3>
+    <h2>Attributes</h2>
+    <h2>Path</h2>
+    <ul>
+        <li>absolute path </li>
+        <li>relative path </li>
+
+    </ul>
+    <p id="small" class="sans-serif--red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente maxime
+        blanditiis beatae deleniti
+        ullam aut
+        explicabo saepe repellat ea dolore quibusdam eveniet distinctio unde, sint quasi! Labore pariatur optio libero?
+    </p>
+
+    <hr>
+    <a href="./sample.pdf" download> download pdf</a>
+
+    <hr>
+    <a href=" https://www.google.com" target="_blank"> google </a>
+    <a href=" https://www.facebook.com" target="_blank"> facebook </a>
+    <a href=" https://www.facebook.com" target="_blank"> instagarm </a>
+    <a href=" https://www.facebook.com" target="_blank"> twitter </a>
+
+    <hr>
+
+    <p id="second" class="sans-serif--red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minima a
+        non beatae deserunt?
+        Fugiat
+        laudantium maiores consequuntur suscipit impedit magnam beatae nihil quisquam quae eligendi delectus laboriosam,
+        iste consequatur.</p>
+    <p id="third" class="sans-serif--red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla voluptate,
+        dolore iusto quidem, earum
+        ullam quae
+        repudiandae quam quas eos explicabo velit fuga dignissimos tenetur asperiores esse totam culpa. Dicta.</p>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+body {
+    background-color: azure;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+nav ul { /* descendent selector */
+    list-style-type: none;
+    text-transform: capitalize;
+}
+
+nav ul li {
+    display: inline;
+}
+
+
+.active-link{
+    color:red;
+    text-decoration: underline;
+}
+
