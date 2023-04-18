@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .red{
+            color:red
+        } */
+
+        p:first-child {
+            color: red;
+        }
+
+
+        /* [required] {
+            border-color: red;
+        } */
+
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 1px solid;
+        }
+
+        div.red.box#first  { /* and selector */
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Selector</h1>
+    <ul>
+        <li>id</li>
+        <li>class</li>
+        <li>tag/elment</li>
+        <li>attribute selector</li>
+        <li>
+            combined selectors
+            <ul>
+                <li>descended selector</li>
+                <li>and selector</li>
+            </ul>
+
+        </li>
+    </ul>
+
+    <div class="box red" id="first">
+
+    </div>
+
+    <div class="box">
+
+    </div>
+
+    <div>
+        <p class="red">Lorem ipsum dolor sit - 1 <span>lorem ipsum</span></p>
+        <p class="green">Lorem ipsum dolor sit - 2</p>
+        <p class="green">Lorem ipsum dolor sit - 3</p>
+    </div>
+
+    <div class="red box">
+        red
+    </div>
+
+    <form>
+        <input type="text" required>
+        <input type="password">
+        <input type="submit">
+    </form>
+
+
+</body>
+
+</html>

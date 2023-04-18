@@ -94,6 +94,23 @@
             border: 1px solid;
             padding: 10px;
         }
+
+        a:hover {
+            color: red
+        }
+            
+        nav li:not(:first-child){
+            margin-left: 10px;
+        }
+
+        /* tfoot td {
+            text-align: center;
+        } */
+        .total{
+            text-align: center;
+        }
+
+
     </style>
 
 </head>
@@ -105,13 +122,13 @@
                 <li>
                     <a href="#" class="active-link">home</a>
                 </li>
-                <li>
+                <li class="ml-10">
                     <a href="./about.html">about us </a>
                 </li>
-                <li>
+                <li class="ml-10">
                     <a href="./courses/mern.html">MERN</a>
                 </li>
-                <li>
+                <li class="ml-10">
                     <a href="./courses/upcomming/data-science.html">data-science</a>
                 </li>
             </ul>
@@ -127,19 +144,27 @@
             <tr>
                 <th>Name</th>
                 <th>Quanity</th>
+                <th>Price</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>Apple</td>
                 <td>10</td>
+                <td>100</td>
             </tr>
             <tr>
                 <td>Orange</td>
                 <td>10</td>
+                <td>10</td>
             </tr>
-
         </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2" class="total">total</td>
+                <td>110</td>
+            </tr>
+        </tfoot>
     </table>
 
     <hr>
