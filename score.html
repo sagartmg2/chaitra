@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p {
+            color: red
+        }
+
+        p {
+            color: green
+        }
+        
+        /* 0 0 1 */
+        p {
+            color: yellow;
+        }
+
+
+        /*  1 0 1 */
+        div #red{
+            color: azure;
+        }
+
+        /*  1 0 0 */
+        #red {
+            color: red;
+        }
+
+        /* 0 1 0 */
+        .teal {
+            color: teal;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!--  -->
+    <h1>specificity score</h1>
+    id > class > tag/element
+
+    <div class="content">
+        <p class="teal" id="red">Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p>
+    </div>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptas natus facere enim soluta optio
+        fugiat? Consectetur nobis sapiente maxime quod iste rerum ipsum fugit distinctio, dolor nisi. Ad, eius?</p>
+
+</body>
+
+</html>

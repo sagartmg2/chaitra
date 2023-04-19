@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            font-size: 18px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .parent {
+            height: 200px;
+            width: 50%;
+            border: 1px solid;
+        }
+
+        .children {
+            border: 1px solid;
+            /* height: 250px; */
+            height: 50%;
+        }
+
+        .box {
+            background-color: teal;
+            height: 100vh;
+            /* width: 100vw; */
+            visibility: hidden;
+            display: none;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .content {
+            border: 1px solid;
+            padding: 16px;
+            padding: 1em;
+            padding: 1.5rem;
+            color: red;
+            color: black;
+        }
+
+
+
+        .content p.second {
+            font-size: 32px;
+            font-size: 2em;
+            font-size: 2rem;
+        }
+
+        .content span {
+            color: green;
+        }
+
+        .em-vs-rem {
+            /* font-size: 32px; */
+        }
+
+        .first {
+            font-size: 1rem;
+            font-size: 1em;
+        }
+
+        .second {
+            font-size: 1rem;
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+
+<body >
+
+    <div class="box">
+        box content
+    </div>
+
+    <h1>measurement units</h1>
+    <ul>
+        <li>px</li>
+        <li class="second"><strong> % </strong></li>
+        <li>vh</li>
+        <li>vw</li>
+        <li>
+            <div>
+                <span class="bold">em</span> <br>
+                1 em = 16px (wrong) <br>
+                1em = parent's font size
+            </div>
+        </li>
+        <li class="">
+            <div>
+                <span class="bold">rem</span> <br>
+                1 em = 16px <br>
+                1em = parent's font size
+            </div>
+
+        </li>
+    </ul>
+    <h2>rem vs em</h2>
+    em - parent font size
+
+    <!-- .parent>.children*2 -->
+
+    <div class="em-vs-rem">
+        <p class="first">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio molestias in cum aut reiciendis vel neque eos
+            corporis odit tenetur ad quia facere, placeat necessitatibus, repellendus quos enim officia mollitia!
+        </p>
+        <hr>
+        <p class="second">
+            Lorem ipsum, dolor sit amet ehenderit. Eveniet, asperiores qui?
+        </p>
+    </div>
+    <div class="content">
+        <a href="#">google</a>
+        <hr>
+        <span>Hello World</span>
+        <hr>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus illum blanditiis repellendus
+            repudiandae, aspernatur molestiae earum quibusdam quisquam ullam quae eaque dolorem veniam nostrum
+            voluptatibus quas debitis maiores natus accusamus.
+        </p>
+        <hr>
+        <p class="second">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus illum blanditiis repellendus
+            repudiandae, aspernatur molestiae earum quibusdam quisquam ullam quae eaque dolorem veniam nostrum
+            voluptatibus quas debitis maiores natus accusamus.
+        </p>
+    </div>
+
+
+    <div class="parent">
+        <div class="children">children</div>
+        <div class="children">children</div>
+    </div>
+
+
+</body>
+
+</html>
