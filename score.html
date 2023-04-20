@@ -15,7 +15,7 @@
         p {
             color: green
         }
-        
+
         /* 0 0 1 */
         p {
             color: yellow;
@@ -23,7 +23,7 @@
 
 
         /*  1 0 1 */
-        div #red{
+        div #red {
             color: azure;
         }
 
@@ -37,6 +37,17 @@
             color: teal;
         }
 
+        /* 101 */
+        body #specificity {
+            background-color: antiquewhite;
+        }
+
+      
+
+        /*  0 0 1  */
+        h1 {
+            color: red
+        }
     </style>
 
 </head>
@@ -44,7 +55,7 @@
 <body>
 
     <!--  -->
-    <h1>specificity score</h1>
+    <h1 class="score" id="specificity">specificity score</h1>
     id > class > tag/element
 
     <div class="content">
