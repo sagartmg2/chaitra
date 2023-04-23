@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 10px 5px 10px 5px ;
+            margin: 10px 5px ;
+            box-sizing: border-box;
+        }
+
+        .flexbox{
+            display: flex;
+            background-color: antiquewhite;
+            height: 400px;
+            gap: .5rem;
+            justify-content: space-between;
+        }
+
+        .flex-item{
+            border: 1px solid;
+        }
+
+        .flex-item:first-child{
+            flex-grow: 3;
+        }
+        .flex-item:last-child{
+            flex-grow: 1;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="flexbox">
+        <div class="flex-item">one</div>
+        <div class="flex-item">two</div>
+        <div class="flex-item">three</div>
+        <div class="flex-item">four</div>
+       
+    </div>
+
+</body>
+
+</html>
