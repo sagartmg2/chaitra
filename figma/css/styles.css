@@ -1,0 +1,149 @@
+/* variables */
+:root {
+    --primary-color: #F54747;
+    --background-color: #FBFBFB;
+    --text-color: #4F5665;
+    --font-family: Rubik, sans-serif;
+    --font-size: 16px;
+}
+
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: rgb(255,0,0,0.05); */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+
+/* typography */
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--text-color);
+}
+
+
+/* global css */
+
+.container {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    align-items: center;
+}
+
+.burger {
+    width: 25px;
+    display: none;
+}
+
+.brand {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-weight: 600;
+}
+
+.brand span:nth-child(2) span {
+    font-weight: 900;
+}
+
+.sidebar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+}
+
+.sidebar .nav-links:first-child {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    text-transform: capitalize;
+}
+
+.btn {
+    border: 1px solid var(--primary-color);
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}
+
+
+/* media query  */
+
+@media(max-width:1399px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media(max-width:1199px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media(max-width:991px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media(max-width:767px) {
+    .burger {
+        display: block;
+    }
+
+    .sidebar {
+        background-color: rgb(212, 255, 255);
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+        padding: 2rem 2.5rem;
+        transform: translate(100%);
+    }
+
+    .sidebar.open {
+        transition: all 0.5s;
+        transform: translate(0%);
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .container {
+        max-width: 540px;
+    }
+}
