@@ -1,3 +1,5 @@
+
+
 let todos = [
     {
         "userId": 1,
@@ -17,31 +19,9 @@ let todos = [
         "title": "js",
         "completed": false
     },
-    {
-        "userId": 1,
-        "id": 4,
-        "title": "et porro tempora",
-        "completed": true
-    },
-    {
-        "userId": 1,
-        "id": 5,
-        "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-        "completed": false
-    },
-    {
-        "userId": 1,
-        "id": 6,
-        "title": "qui ullam ratione quibusdam voluptatem quia omnis",
-        "completed": false
-    },
-    {
-        "userId": 1,
-        "id": 7,
-        "title": "illo expedita consequatur quia in",
-        "completed": false
-    },
 ]
+
+// console.log( todos[0].title + "is" + todos[0].completed )
 
 /* 
 output
@@ -59,8 +39,8 @@ let house = {
 
 }
 
-console.log(house.owner);
-console.log(colors[0])
+// console.log(house.owner);
+// console.log(colors[0])
 
 // console.log(`${todos[0].title} is ${todos[0].completed}`)
 // console.log(`${todos[1].title} is ${todos[1].completed}`)
@@ -73,12 +53,39 @@ console.log(colors[0])
 
 /* let index = 0 */
 function printTodoStatus(index) {
-    console.log(`${todos[index].title} is ${todos[index].completed}`)
+    // if (todos[index].completed) {
+    //     console.log(`${todos[index].title} is completed`)
+    // } else {
+    //     console.log(`${todos[index].title} is  in process`)
+    // }
+
+    /* Ternary operator  ?  */
+        console.log(`${todos[index].title} is ${todos[index].completed ? "complted" : "in-process" }`)
+
+
 }
 
 printTodoStatus(0)
 printTodoStatus(1)
 printTodoStatus(2)
-printTodoStatus(3)
-printTodoStatus(4)
 
+
+// if (false) {
+//     console.log("do something");
+// } else {
+//     console.log("do some ohte tasks");
+// }
+
+
+// console.log(1 + 2);
+// console.log(1 - 2);
+// console.log(1 / 2);
+
+
+console.log(true ? "yes" : "no");
+
+if (true) {
+    console.log("yes");
+} else {
+    console.log("NO");
+}

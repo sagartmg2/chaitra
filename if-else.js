@@ -1,7 +1,6 @@
 
 let will_rain = false
-let has_probability = true
-
+let has_probability = false
 
 // if( <contidion> ) {  }
 
@@ -26,8 +25,15 @@ if (will_rain) {
 }
 
 
+console.log(will_rain ? "take it" :  has_probability ? "you may take it" : "no need" );
+
+
+
 // if (false) {
 //     console.log("true statement");
 // }else{
 //     console.log("false statement");
 // }
+
+
+
