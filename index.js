@@ -1,4 +1,5 @@
 
+// console.log(0);
 // console.log(1);
 // console.log(2);
 // console.log(3);
@@ -192,50 +193,59 @@ let users = [
             "bs": "e-enable extensible e-tailers"
         }
     },
-    {
-        "id": 9,
-        "name": "Glenna Reichert",
-        "username": "Delphine",
-        "email": "Chaim_McDermott@dana.io",
-        "address": {
-            "street": "Dayna Park",
-            "suite": "Suite 449",
-            "city": "Bartholomebury",
-            "zipcode": "76495-3109",
-            "geo": {
-                "lat": "24.6463",
-                "lng": "-168.8889"
-            }
-        },
-        "phone": "(775)976-6794 x41206",
-        "website": "conrad.com",
-        "company": {
-            "name": "Yost and Sons",
-            "catchPhrase": "Switchable contextually-based project",
-            "bs": "aggregate real-time technologies"
-        }
-    },
-    {
-        "id": 10,
-        "name": "Clementina DuBuque",
-        "username": "Moriah.Stanton",
-        "email": "Rey.Padberg@karina.biz",
-        "address": {
-            "street": "Kattie Turnpike",
-            "suite": "Suite 198",
-            "city": "Lebsackbury",
-            "zipcode": "31428-2261",
-            "geo": {
-                "lat": "-38.2386",
-                "lng": "57.2232"
-            }
-        },
-        "phone": "024-648-3804",
-        "website": "ambrose.net",
-        "company": {
-            "name": "Hoeger LLC",
-            "catchPhrase": "Centralized empowering task-force",
-            "bs": "target end-to-end models"
-        }
-    }
+
 ]
+
+
+/* loop
+        for 
+        while
+        do-white
+
+*/
+
+// for( <starting point> ; <condition> ; < mutator> )
+
+
+// let count = 0
+// count++
+// console.log({count});
+
+/* 1-5 */
+
+for (let number = 1; number <= 5; number++) {
+    console.log("loop-number-", number);
+}
+
+console.log("loop-ended");
+
+
+// console.log(users[0].name);
+// console.log(users[1].name);
+// console.log(users[2].name);
+
+function printUserInfo(index) {
+    console.log(users[index].name);
+}
+
+// printUserInfo(0) print_user_info()
+// printUserInfo(1)
+// printUserInfo(2)
+// printUserInfo(3)
+// printUserInfo(4)
+// printUserInfo(5)
+
+
+for (let index = 0; index < users.length; index++) {
+    // console.log("index", index);
+    // printUserInfo(index)
+    // log
+    // console.log(`- ${users[index].name}'s email is ${users[index].email}`);
+}
+
+
+if (!true) {
+    console.log("true ");
+} else {
+    console.log(false);
+}
