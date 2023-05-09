@@ -13,3 +13,9 @@ TODO:
         { name: 'Anisha', email: 'anisha@gmail.com', password: 'anisha3' },
     ] 
 */
+
+let fakeUsers = nepaliNames.map((el,index) => {
+    return { name: el, email: `${el}@gmail.com`,password:`${el}${index}` }
+})
+
+console.log(fakeUsers);

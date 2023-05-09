@@ -1,4 +1,4 @@
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 10]
+let numbers = [1, 2, 3, 4, 5]
 
 let doubled = [];
 
@@ -34,6 +34,15 @@ numbers.forEach((element, index) => {
 
 console.log(doubled); // [2,4,6,8,20]
 
+
+let double_numbers = numbers.map((element, index) => {
+    console.log("inside map", element, index)
+    return element*2
+})
+
+
+console.log(numbers);
+console.log(double_numbers);
 
 
 
