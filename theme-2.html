@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body.dark {
+            background-color: black;
+            color: white;
+        }
+
+        #light{
+            display: none;
+        }
+        .dark #dark{
+            display: none;
+        }
+        .dark #light{
+            display: initial;
+        } 
+        
+    </style>
+
+
+</head>
+
+<body id="body" class="bdy">
+    <button onclick="changeTheme('light')" id="light">light theme</button>
+    <button onclick="changeTheme('dark')" id="dark">dark theme</button>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eligendi eveniet, ad sit illo est repellat!
+        Temporibus, incidunt? Amet laudantium sed officiis ea quas voluptatum modi alias deleniti, adipisci aliquam!</p>
+    <script>
+
+        let body = document.getElementById("body")
+
+        const changeTheme = (theme_type) => {
+            if (theme_type === "dark") {
+                body.classList.add("dark")
+            } else {
+                body.classList.remove("dark")
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
