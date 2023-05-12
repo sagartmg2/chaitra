@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="calculate(event)">
+        <input type="number" name="first_input">
+        <select name="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">X</option>
+        </select>
+        <input type="number" name="second_input">
+        <!-- <button>calculate</button> -->
+        <input type="submit" value="calculate">
+
+    </form>
+    <hr>
+    <p>result:<span id="result"> </span></p>
+
+    <script>
+        function calculate(event) {
+            event.preventDefault()
+
+            console.log("",);
+            let num1 = parseFloat(event.target.first_input.value)
+            let num2 = parseFloat(event.target.second_input.value)
+            let operator = event.target.operator.value
+            console.log(operator);
+
+            let result = null
+
+            // if (operator === "+") {
+            //     result = num1 + num2
+            // } else if (operator === "-") {
+            //     result = num1 - num2
+            // }
+
+            switch (operator) {
+                case "+": result = num1 + num2
+                    break;
+                case "-": result = num1 - num2
+                    break;
+                case "*": result = num1 * num2
+                    break;
+            }
+
+            document.getElementById("result").innerText = result
+        }
+
+    </script>
+</body>
+
+</html>
