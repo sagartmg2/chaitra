@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,
+        td {
+            border: 1px solid;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Username</th>
+        </tr>
+        <tbody id="tbody">
+            <tr>
+                <td>
+                    ram
+                </td>
+                <td>
+                    rammm123
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ram
+                </td>
+                <td>
+                    rammm123
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(users => {
+
+
+                // users_array
+                // 1 convert array to string of <tr> <td> name</td>,<td>userane</td></tr>
+                // 2 via innerHTML convert "<tr>...." actual <tr>
+
+            })
+
+    </script>
+</body>
+
+</html>

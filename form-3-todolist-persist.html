@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="addTodo(event)">
+        <input type="text" name="title">
+        <button type="submit"> add todo</button>
+    </form>
+    <hr>
+    <ul id="todos">
+
+    </ul>
+
+    <script>
+
+        let todos = []
+        let stored_todos = JSON.parse(localStorage.getItem("todos"))
+        todos = stored_todos
+
+        function convertTodosToList() {
+            let str = "";
+            todos.forEach((el) => {
+                str += `<li>${el} <button onclick="deleteTodo()">delete</button> </li>`
+            })
+
+            document.getElementById("todos").innerHTML = str
+        }
+
+        convertTodosToList()
+
+        const addTodo = (event) => {
+            event.preventDefault()
+            // console.log(event.target.title.value)
+            todos.push(event.target.title.value)
+            console.log(todos);
+
+            convertTodosToList()
+
+            event.target.title.value = ""
+
+            localStorage.setItem("todos", JSON.stringify(todos))
+        }
+
+        function deleteTodo(index) {
+            console.log("detekte", index)
+
+
+            /* 
+                1. find out the index of element which is being delete... 
+                2. filter out the element from existing todos  // hint : temp_array,  if ,push method  OR  filter method of   
+                3. set the todos in localstore for filtered tidis
+                3. convert array to list
+            
+            */
+
+        }
+    </script>
+</body>
+
+</html>
