@@ -21,13 +21,19 @@
     <script>
 
         let todos = []
-        let stored_todos = JSON.parse(localStorage.getItem("todos"))
-        todos = stored_todos
+
+        todos = JSON.parse(localStorage.getItem("todos")) || []
+
+        // if(stored_todos){
+        //     todos = stored_todos
+        // }
+
+
 
         function convertTodosToList() {
             let str = "";
-            todos.forEach((el) => {
-                str += `<li>${el} <button onclick="deleteTodo()">delete</button> </li>`
+            todos.forEach((el, index) => {
+                str += `<li>${el} <button onclick="deleteTodo(${index})">delete</button> </li>`
             })
 
             document.getElementById("todos").innerHTML = str
@@ -48,8 +54,28 @@
             localStorage.setItem("todos", JSON.stringify(todos))
         }
 
+
         function deleteTodo(index) {
             console.log("detekte", index)
+
+            // let temp = []
+
+            // for (let i = 0; i < todos.length; i++) {
+            //     if (index !== i) {
+            //         temp.push(todos[i])
+            //     }
+
+            // }
+
+            // todos = temp
+
+
+            // [1, 2, 3, 4, 5].filter(el => el % 2 == 0)
+            
+            todos = todos.filter((el, idx) => idx != index)
+
+            convertTodosToList()
+            localStorage.setItem("todos", JSON.stringify(todos))
 
 
             /* 
