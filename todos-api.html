@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid;
+            padding: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Todo List
+    </h1>
+    <form onsubmit="addTodo(event)">
+        <input name="title" required>
+        <button type="submit">submit</button>
+    </form>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Status</th>
+        </tr>
+        <tbody id="t_body">
+            <tr>
+                <td>sLoading....</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+        function addTodo(e) {
+            e.preventDefault();
+
+            fetch("https://todo-api-sagartmg2.vercel.app/api/todos", {
+                method: "POST",
+                body: JSON.stringify({
+                    "title": e.target.title.value
+                }),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }).then(res => {
+                fetchTodos()
+            })
+        }
+
+        fetchTodos();
+
+        function fetchTodos() {
+            fetch("https://todo-api-sagartmg2.vercel.app/api/todos")
+                .then(res => {
+                    //    res.json()
+                    return res.json();
+                })
+                .then(res => {
+                    console.log(res)
+                    let todos = res.data;
+
+                    let str = "";
+                    todos.forEach(el => {
+                        str += `<tr> <td> ${el.title} </td> <td>${el.status} </td> </tr>`
+                    })
+                    console.log(str)
+
+                    document.getElementById("t_body").innerHTML = str
+
+
+                })
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
