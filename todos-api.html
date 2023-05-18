@@ -6,6 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=], initial-scale=1.0">
     <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
     <style>
         table {
             border-collapse: collapse;
@@ -23,14 +32,39 @@
     <h1>
         Todo List
     </h1>
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body">
+
+                </div>
+                <!--  -->
+            </div>
+        </div>
+    </div>
+
     <form onsubmit="addTodo(event)">
         <input name="title" required>
         <button type="submit">submit</button>
     </form>
+    <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
     <table>
         <tr>
             <th>Title</th>
             <th>Status</th>
+            <th>Action</th>
         </tr>
         <tbody id="t_body">
             <tr>
@@ -71,15 +105,65 @@
 
                     let str = "";
                     todos.forEach(el => {
-                        str += `<tr> <td> ${el.title} </td> <td>${el.status} </td> </tr>`
+                        // <button onclick="editTodo('${el._id}')">edit</button>
+                        str += `<tr> <td> ${el.title} </td> <td>${el.status} </td> 
+                            <td> 
+                                <button onclick="deleteTodo('${el._id}')">delete</button>
+                                <button type="button" onclick="editTodo( '${el.title}' ,${el.status} ,'${el._id}')" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    edit
+                                </button>
+                            </td> 
+                        </tr>`
                     })
                     console.log(str)
 
                     document.getElementById("t_body").innerHTML = str
-
-
                 })
+        }
 
+        function editTodo(title, status, id) {
+            console.log(title, status, id)
+            document.getElementById("modal-body").innerHTML = ` <form onsubmit="updateTodo(event,'${id}')">
+                    <input name="title" value="${title}">   
+                    <hr/>
+                    <select name="status">
+                        <option  ${status ? "selected" : ""}>true</option>
+                        <option ${!status ? "selected" : ""}>false</option>
+                    </select>   
+                    <hr/>
+                    <button class="btn btn-primary">submit</button>
+                </form>
+            `
+
+
+
+        }
+
+
+        function updateTodo(event,id) {
+            event.preventDefault()
+
+            fetch("https://todo-api-sagartmg2.vercel.app/api/todos/"+id,{
+                method:"PUT",
+                body:JSON.stringify({
+                    "title":event.target.title.value,
+                    "status":event.target.status.value
+                }),
+                headers: { 'Content-Type': 'application/json' }
+            })
+            .then(res =>{
+                fetchTodos()
+            })
+        }
+
+        function deleteTodo(id) {
+            console.log(id)
+            fetch("https://todo-api-sagartmg2.vercel.app/api/todos/" + id, {
+                method: "DELETE"
+            })
+                .then(res => {
+                    fetchTodos()
+                })
         }
 
 
